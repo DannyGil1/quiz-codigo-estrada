@@ -3,7 +3,7 @@
 // ------------------
 
 // Artigo 1 - Definições legais
-const artigo1 = [
+var artigo1 = [
     // Fáceis
     {
         pergunta: "O que é considerado 'via pública' no Código de Estrada?",
@@ -176,10 +176,163 @@ const artigo1 = [
     }
 ];
 
-// Os outros artigos do capítulo 1 ficam aqui:
-const artigo2 = [];
-const artigo3 = [];
-const artigo4 = [];
-const artigo5 = [];
-const artigo6 = [];
-const artigo7 = [];
+// Os outros artigos do capítulo 1 ficam aqui
+
+var artigo2 = [
+    // Questões fáceis
+    {
+        pergunta: "Onde são aplicáveis as normas do Código de Estrada?",
+        opcoes: [
+            "Apenas em vias privadas.",
+            "Em todo o território nacional, nas vias de domínio público do Estado e poder local.",
+            "Apenas em auto-estradas.",
+            "Apenas em zonas rurais."
+        ],
+        resposta: 1
+    },
+    {
+        pergunta: "As normas do Código de Estrada aplicam-se a vias privadas?",
+        opcoes: [
+            "Não, nunca.",
+            "Sim, apenas se estiverem fechadas ao trânsito público.",
+            "Sim, quando abertas ao trânsito público, salvo regulamento próprio.",
+            "Apenas em casos de emergência."
+        ],
+        resposta: 2
+    },
+    {
+        pergunta: "Quem pode regular o trânsito em vias privadas abertas ao público?",
+        opcoes: [
+            "Apenas o governo central.",
+            "Os proprietários, através de acordos específicos.",
+            "Apenas os peões.",
+            "Nenhuma das anteriores."
+        ],
+        resposta: 1
+    },
+    {
+        pergunta: "O Código de Estrada prevê exceções para vias privadas?",
+        opcoes: [
+            "Não, aplica-se sempre integralmente.",
+            "Sim, se houver acordo com os proprietários.",
+            "Apenas para veículos oficiais.",
+            "Apenas em zonas urbanas."
+        ],
+        resposta: 1
+    },
+    {
+        pergunta: "As normas do Código de Estrada são válidas em:",
+        opcoes: [
+            "Apenas nas capitais provinciais.",
+            "Todo o território nacional, incluindo vias públicas estaduais e municipais.",
+            "Apenas em estradas nacionais.",
+            "Apenas em locais sinalizados."
+        ],
+        resposta: 1
+    },
+
+    // Questões médias
+    {
+        pergunta: "O que acontece se uma via privada aberta ao trânsito público não tiver regulamento próprio?",
+        opcoes: [
+            "O Código de Estrada não se aplica.",
+            "Aplica-se o Código de Estrada na íntegra.",
+            "Apenas as regras de velocidade são aplicadas.",
+            "Apenas os agentes de autoridade podem circular."
+        ],
+        resposta: 1
+    },
+    {
+        pergunta: "Qual é o âmbito territorial do Código de Estrada?",
+        opcoes: [
+            "Apenas nas áreas urbanas.",
+            "Em todo o território nacional, incluindo vias públicas e privadas abertas ao trânsito.",
+            "Apenas nas auto-estradas.",
+            "Apenas em vias municipais."
+        ],
+        resposta: 1
+    },
+    {
+        pergunta: "As normas do Código de Estrada podem ser modificadas em vias privadas?",
+        opcoes: [
+            "Nunca.",
+            "Sim, através de acordos com os proprietários.",
+            "Apenas para veículos de emergência.",
+            "Apenas em casos de obras."
+        ],
+        resposta: 1
+    },
+    {
+        pergunta: "O Código de Estrada prevê a sua aplicação em vias do domínio privado quando:",
+        opcoes: [
+            "Estiverem fechadas ao público.",
+            "Forem utilizadas apenas por peões.",
+            "Estiverem abertas ao trânsito público e não houver regulamento próprio.",
+            "Apenas em feriados nacionais."
+        ],
+        resposta: 2
+    },
+    {
+        pergunta: "Quem tem competência para regular o trânsito em vias públicas municipais?",
+        opcoes: [
+            "Apenas o governo central.",
+            "O poder local, em conformidade com o Código de Estrada.",
+            "Apenas os proprietários de veículos.",
+            "Apenas os agentes de trânsito."
+        ],
+        resposta: 1
+    },
+
+    // Questões difíceis
+    {
+        pergunta: "Qual é a hierarquia das normas em vias privadas abertas ao trânsito público?",
+        opcoes: [
+            "O acordo com o proprietário prevalece sobre o Código de Estrada.",
+            "O Código de Estrada prevalece sobre qualquer acordo.",
+            "Apenas as regras de estacionamento se aplicam.",
+            "Nenhuma norma se aplica."
+        ],
+        resposta: 0
+    },
+    {
+        pergunta: "O Código de Estrada aplica-se a vias privadas utilizadas para eventos temporários (ex.: feiras)?",
+        opcoes: [
+            "Não, pois são temporárias.",
+            "Sim, se estiverem abertas ao trânsito público e não houver regulamento próprio.",
+            "Apenas se houver sinalização específica.",
+            "Apenas para veículos autorizados."
+        ],
+        resposta: 1
+    },
+    {
+        pergunta: "Em caso de conflito entre o Código de Estrada e um acordo em via privada, o que prevalece?",
+        opcoes: [
+            "Sempre o Código de Estrada.",
+            "O acordo, desde que não contrarie normas de segurança do Código.",
+            "A decisão do agente de trânsito no local.",
+            "Nenhuma das anteriores."
+        ],
+        resposta: 1
+    },
+    {
+        pergunta: "As vias do domínio privado estão totalmente isentas do Código de Estrada?",
+        opcoes: [
+            "Sim, sempre.",
+            "Não, se estiverem abertas ao trânsito público.",
+            "Apenas se forem utilizadas por veículos oficiais.",
+            "Apenas em áreas rurais."
+        ],
+        resposta: 1
+    },
+    {
+        pergunta: "O que acontece se uma via privada tiver regras próprias mas violar princípios básicos do Código de Estrada?",
+        opcoes: [
+            "As regras próprias são sempre válidas.",
+            "O Código de Estrada prevalece nos aspectos de segurança.",
+            "A via é imediatamente fechada.",
+            "Apenas os peões podem circular."
+        ],
+        resposta: 1
+    }
+]
+
