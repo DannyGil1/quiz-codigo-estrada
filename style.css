@@ -1,0 +1,196 @@
+/* ===== Configuração global ===== */
+body {
+  font-family: Arial, sans-serif;
+  background: url('assets/img/fundo-quiz.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #FFFFFF;
+
+  /* Centralização do container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Altura total da tela */
+  min-height: 100vh;
+  margin: 0;
+
+  /* Efeito de blur no fundo */
+  backdrop-filter: blur(5px);
+}
+
+/* Container do quiz com fundo escuro semi-transparente */
+.quiz-container {
+  background: rgba(30, 30, 30, 0.95);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #FFD700; /* Amarelo ouro */
+}
+
+#pergunta {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* ===== Botões das opções ===== */
+.opcao {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background: #2C2C2C; /* Cinza escuro */
+  color: #FFFFFF;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.opcao:hover:not(:disabled) {
+  transform: scale(1.02);
+}
+
+/* ===== Estados de seleção e resultado ===== */
+.opcao.selecionada {
+  background: #444444; /* Cinza mais claro */
+}
+
+.opcao.correta {
+  background: #00C853; /* Verde para correta */
+  color: #000;
+}
+
+.opcao.errada {
+  background: #D81E05; /* Vermelho Angola para errada */
+  color: #fff;
+}
+
+.opcao:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* ===== Botão "Próxima" ===== */
+#proxima {
+  background: #FFD700; /* Amarelo ouro */
+  color: #000;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+#proxima:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+#resultado {
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ===== Responsividade ===== */
+@media (min-width: 768px) {
+  .quiz-container {
+    max-width: 700px;
+    padding: 30px;
+  }
+  .opcao {
+    font-size: 18px;
+    padding: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .quiz-container {
+    max-width: 900px;
+  }
+  .opcao {
+    font-size: 20px;
+    padding: 16px;
+  }
+}
+
+
+/* ===== Estilo da página inicial ===== */
+#capitulos {
+    margin: 20px 0;
+  }
+  
+  .opcao.ativa {
+    background: #FFD700; /* Amarelo ouro para botão ativo */
+    color: #000;
+  }
+  
+  .navegacao {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .navegacao button {
+    background: #FFD700;
+    color: #000;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .navegacao button:disabled {
+    background: #555;
+    cursor: not-allowed;
+  }
+  
+  /* ===== Botões de navegação ===== */
+.navegacao {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .navegacao button {
+    background: linear-gradient(45deg, #FFD700, #FFB300); /* Gradiente dourado */
+    color: #000;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  }
+  
+  .navegacao button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+  }
+  
+  .navegacao button:disabled {
+    background: #555;
+    color: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+  #resultado-container {
+    text-align: center;
+  }
+  

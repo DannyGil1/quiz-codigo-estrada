@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz - Código de Estrada de Angola</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container" id="quiz">
+      <h1 id="tituloQuiz">Quiz</h1>
+      <p id="pergunta"></p>
+      <div id="opcoes"></div>
+      <button id="proxima" disabled>Próxima</button>
+    </div>
+  
+    <!-- Container de resultado estilizado -->
+    <div class="quiz-container" id="resultado-container" style="display:none;">
+      <h1>Resultado</h1>
+      <p id="resultado"></p>
+      <div class="navegacao">
+        <button onclick="window.location.href='index.html'">Voltar ao Menu</button>
+      </div>
+    </div>
+  
+    <!-- Banco de perguntas -->
+    <script src="dados/capitulo1.js"></script>
+  
+    <!-- Script principal -->
+    <script src="script.js"></script>
+  
+    <script>
+      function getParametroURL(nome) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(nome);
+      }
+  
+      const cap = getParametroURL('cap');
+      const art = getParametroURL('art');
+  
+      document.getElementById("tituloQuiz").textContent =
+        `Capítulo ${cap} - Artigo ${art}`;
+  
+      let questoesSelecionadas = [];
+      if (cap === "1" && art === "1") {
+        questoesSelecionadas = embaralhar([...artigo1]).slice(0, 5);
+      } else {
+        alert("Este artigo ainda não está disponível.");
+        window.location.href = "artigos.html?cap=" + cap;
+      }
+  
+      iniciarQuiz(questoesSelecionadas, mostrarResultado);
+  
+      // Função para exibir resultado no container
+      function mostrarResultado(pontuacao, total) {
+        document.getElementById("quiz").style.display = "none";
+        document.getElementById("resultado-container").style.display = "block";
+        document.getElementById("resultado").textContent =
+          `Você acertou ${pontuacao} de ${total} questões.`;
+      }
+    </script>
+  </body>
+  
+</html>
