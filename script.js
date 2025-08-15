@@ -36,7 +36,7 @@ function mostrarPergunta(callbackFinal) {
       const botao = document.createElement("button");
       botao.textContent = opcao;
       botao.classList.add("opcao");
-      botao.onclick = () => selecionarOpcao(index, perguntaAtual.correta, botaoProxima);
+      botao.onclick = () => selecionarOpcao(index, perguntaAtual.correta, perguntaAtual.opcoes, botaoProxima);
       opcoesElemento.appendChild(botao);
     });
 
@@ -49,9 +49,17 @@ function mostrarPergunta(callbackFinal) {
   }
 }
 
-// Selecionar opção
-function selecionarOpcao(indiceSelecionado, indiceCorreto, botaoProxima) {
+// Selecionar opção (aceita índice ou texto como correta)
+function selecionarOpcao(indiceSelecionado, correta, listaOpcoes, botaoProxima) {
   const botoes = document.querySelectorAll(".opcao");
+
+  // Determinar índice correto
+  let indiceCorreto;
+  if (typeof correta === "number") {
+    indiceCorreto = correta;
+  } else {
+    indiceCorreto = listaOpcoes.findIndex(opcao => opcao.toLowerCase() === correta.toLowerCase());
+  }
 
   botoes.forEach((botao, index) => {
     botao.disabled = true;
