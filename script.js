@@ -49,16 +49,18 @@ function mostrarPergunta(callbackFinal) {
   }
 }
 
-// Selecionar opção (aceita índice ou texto como correta)
+// Selecionar opção (aceita índice numérico ou texto como correta)
 function selecionarOpcao(indiceSelecionado, correta, listaOpcoes, botaoProxima) {
   const botoes = document.querySelectorAll(".opcao");
 
-  // Determinar índice correto
+  // Normaliza a resposta correta
   let indiceCorreto;
   if (typeof correta === "number") {
     indiceCorreto = correta;
   } else {
-    indiceCorreto = listaOpcoes.findIndex(opcao => opcao.toLowerCase() === correta.toLowerCase());
+    indiceCorreto = listaOpcoes.findIndex(opcao => 
+      opcao.trim().toLowerCase() === String(correta).trim().toLowerCase()
+    );
   }
 
   botoes.forEach((botao, index) => {
